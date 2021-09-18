@@ -18,7 +18,7 @@ class Artist
         end
     end
 
-    def add_song
+    def add_song(song)
         song.artist = self
     end
 
@@ -31,4 +31,10 @@ class Artist
             puts song.name
         end
     end
+
+    def self.find(name)
+        self.all.find {|artist| artist.name == name}
+    end
+
+
 end
